@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: "AS_BRONZE_UVA023"
+    schema: "ZOOPLA"
+    tables:
+      - name: bronze_zoopla
+        identifier: "BRONZE_ZOOPLA"
+        description: "Bronze Zoopla table"
+
+  - name: rightmove
+    database: "AS_BRONZE_UVA023"
+    schema: "RIGHTMOVE"
+    tables:
+      - name: rightmove_listings
+        identifier: "RIGHTMOVE_LISTINGS"
+        description: "Bronze Rightmove listings table"
+
+  - name: otm
+    database: "AS_BRONZE_UVA023"
+    schema: "ON_THE_MARKET"
+    tables:
+      - name: snapshot
+        identifier: "SNAPSHOT"
+        description: "Raw OTM bronze snapshot data from OnTheMarket"

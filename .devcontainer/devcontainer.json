@@ -1,0 +1,22 @@
+{
+  "name": "dbt-dev",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "envFile": "../.env",
+  "postCreateCommand": "echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.bashrc && echo '[ -f /workspace/.env ] && set -a && source /workspace/.env && set +a' >> ~/.bashrc",
+  "remoteUser": "devuser",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+  ]
+}

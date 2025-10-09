@@ -1,4 +1,4 @@
-ugs027_dbt_sandbox:
+dbt_analyse:
   target: dev
   outputs:
     dev:
